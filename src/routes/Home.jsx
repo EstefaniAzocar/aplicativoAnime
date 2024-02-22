@@ -7,7 +7,7 @@ import { MyCarousel } from '../components/Carousel/index.jsx';
 import { HomeContainer, SearchContainer } from '/src/routes/Home.js';
 import { Card } from '/src/components/Card/index.jsx';
 
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/api/anime?q=${search}`);
+      const response = await axios.get(`${apiUrl}/api/anime?q=${search}`);
       setAnimeData(response.data);
 
       console.log("data", response.data);
@@ -29,7 +29,7 @@ function Home() {
   useEffect(() => {
     const getDefaultImages = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/anime/default-images');
+        const response = await axios.get(`${apiUrl}/api/anime/default-images`);
         setAnimeData(response.data);
         console.log("default images", response.data);
       } catch (error) {
