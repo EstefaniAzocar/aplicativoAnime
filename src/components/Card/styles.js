@@ -3,12 +3,6 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    ${'' /* align-items: center;
-    justify-content: center; */}
-    /* width: 20%;
-    min-width: 120px;
-    max-width: 160px; */
-    /* height: 260px; */
     gap: 5px;
 
     & .message{

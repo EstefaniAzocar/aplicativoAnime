@@ -24,7 +24,7 @@ export function Card ({item}) {
         />
       )}
         <p className='title'>{title}</p>
-        {/* <p>{item.scoreMessage}</p> */}
+
       </CardBox>
       <p className='message'>{scoreMessage}</p> 
     </CardContainer>

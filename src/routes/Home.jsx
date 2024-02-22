@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import AnimeList from '/src/components/AnimeList';
 import SearchForm from '../components/SearchForm/index.jsx';
 import './Home.js';
 import { MyCarousel } from '../components/Carousel/index.jsx';
@@ -48,22 +47,12 @@ function Home() {
             <h1>Buscador de Anime</h1>
             <SearchForm search={search} setSearch={setSearch} getData={getData}/>
         </SearchContainer>
-        {/* <div className='CardList'>
-            <ul className="anime-list">
-              {
-                animeData.length && 
-                animeData.map(anime => <Card key={anime.mal_id} item={anime}/>)
-              }
-            <AnimeList animeData={animeData}/>
-            </ul>
-        </div> */}
         <MyCarousel>
           {
             animeData.length &&
             animeData.map(anime => <Card key={anime.mal_id} item={anime}/>)
           }
         </MyCarousel>
-        {/* <MyCarousel/> */}
     </HomeContainer>
   );
 }
