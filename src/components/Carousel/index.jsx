@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useRef, useEffect } from "react";
 import {
   Wrapper,
@@ -6,7 +7,6 @@ import {
   Button,
   Content
 } from "./index.js";
-
 
 export function MyCarousel ({children}) {
   const gap = 16;

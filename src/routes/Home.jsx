@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchForm from '../components/SearchForm/index.jsx';
@@ -9,26 +9,24 @@ import { Card } from '/src/components/Card/index.jsx';
 function Home() {
   const [search, setSearch] = useState('');
   const [animeData, setAnimeData] = useState([]);
-  const [loading, setLoading] = useState(true); // Nuevo estado para indicar carga
+  const [loading, setLoading] = useState(true);
 
   const apiUrl = import.meta.env.VITE_API_URL;
   
-// Obtener imágenes al buscar por titulo
   const getData = async () => {
     try {
-      setLoading(true); // Indicar inicio de carga
+      setLoading(true);
       const response = await axios.get(`${apiUrl}/api/anime?q=${search}`);
       setAnimeData(response.data);
       console.log("data", response.data);
     } catch (error) {
       console.error('Error en la búsqueda:', error);
     } finally {
-      setLoading(false); // Indicar fin de carga, ya sea exitosa o con error
-      setSearch(''); // Limpiar el input después de obtener los datos
+      setLoading(false);
+      setSearch(''); 
     }
   };
 
-  // Obtener imágenes predeterminadas al cargar la página
   useEffect(() => {
     const getDefaultImages = async () => {
       try {
