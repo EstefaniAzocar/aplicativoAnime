@@ -12,7 +12,8 @@ function Home() {
   const [loading, setLoading] = useState(true); // Nuevo estado para indicar carga
 
   const apiUrl = import.meta.env.VITE_API_URL;
-
+  
+// Obtener imágenes al buscar por titulo
   const getData = async () => {
     try {
       setLoading(true); // Indicar inicio de carga

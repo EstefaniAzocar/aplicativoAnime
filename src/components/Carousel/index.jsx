@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+
 import React, { useState, useRef, useEffect } from "react";
 import {
   Wrapper,
@@ -8,7 +8,6 @@ import {
 } from "./index.js";
 
 
-// eslint-disable-next-line react/prop-types
 export function MyCarousel ({children}) {
   const gap = 16;
   const carouselRef = useRef(null);
@@ -29,11 +28,9 @@ export function MyCarousel ({children}) {
   const handleNextClick = () => {
     carouselRef.current.scrollBy({ left: width + gap, behavior: 'smooth' });
     if (carouselRef.current.scrollWidth !== 0) {
-      // Check if there is content to scroll
       prevRef.current.style.display = 'flex';
     }
     if (contentRef.current.scrollWidth - width - gap <= carouselRef.current.scrollLeft + width) {
-      // Check if we reach the end of content
       nextRef.current.style.display = 'none';
     }
   };
@@ -41,11 +38,9 @@ export function MyCarousel ({children}) {
   const handlePrevClick = () => {
     carouselRef.current.scrollBy({ left: -(width + gap), behavior: 'smooth' });
     if (carouselRef.current.scrollLeft - width - gap <= 0) {
-      // Check if we reach the beginning of content
       prevRef.current.style.display = 'none';
     }
     if (!(contentRef.current.scrollWidth - width - gap <= carouselRef.current.scrollLeft + width)) {
-      // Check if there is content to scroll
       nextRef.current.style.display = 'flex';
     }
   };

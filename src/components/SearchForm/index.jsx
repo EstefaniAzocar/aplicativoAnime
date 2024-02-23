@@ -1,9 +1,9 @@
 import {SearchContainer} from './index.js';
 
-// eslint-disable-next-line react/prop-types
+
 function SearchForm ({search, setSearch, getData}){
   return(
-    //className="searchForm"
+  
 
       <SearchContainer >
       <input

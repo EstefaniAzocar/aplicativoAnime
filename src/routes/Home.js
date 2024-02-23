@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Home from "./Home";
 
 export const HomeContainer = styled.div`
     width: 100%;
