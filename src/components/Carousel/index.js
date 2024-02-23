@@ -8,14 +8,14 @@ export const Wrapper = styled.div`
   & .prev{
     top: 50%;
     left: 0;
-    transform: translate(50%, -50%);
+    transform: translate(-20%, -50%);
     display: none;
   }
 
   & .next{
     top: 50%;
     right: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(60%, -50%);
   }
 
   @media screen and (min-width: 568px) {

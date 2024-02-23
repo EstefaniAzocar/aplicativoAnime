@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Home from "./Home";
 
 export const HomeContainer = styled.div`
     width: 100%;
@@ -18,9 +19,12 @@ export const SearchContainer = styled.div`
 
     & h1{
         color: #dfdfdf;
-        font-size: 2.5em;
+        font-size: 2.2em;
+        
+        
     }
 `
+
 export const LoadingMessage = styled.p`
   font-size: 18px;
   color: #FFFFFF;
