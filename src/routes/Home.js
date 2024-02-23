@@ -19,4 +19,8 @@ export const SearchContainer = styled.div`
     & h1{
         color: #dfdfdf;
     }
- `
+`
+export const LoadingMessage = styled.p`
+  font-size: 18px;
+  color: #FFFFFF;
+`
