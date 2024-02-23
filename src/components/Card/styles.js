@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
 
     & .message{
       text-align: center;
-      font-size: 11px;
+      font-size: 12px;
       color: #ffffff;
     }
  `
@@ -39,8 +39,8 @@ export const CardBox = styled.div`
 
   &  p {
     color: #180045;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 550;
     width: 97%;
     text-align: center;
     margin: 0px;
