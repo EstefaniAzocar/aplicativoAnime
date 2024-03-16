@@ -25,6 +25,21 @@ export function MyCarousel ({children}) {
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowLeft') {
+        handlePrevClick();
+      } else if (event.key === 'ArrowRight') {
+        handleNextClick();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []); // La dependencia vacía [] asegura que este efecto se ejecute solo una vez
+
   const handleNextClick = () => {
     carouselRef.current.scrollBy({ left: width + gap, behavior: 'smooth' });
     if (carouselRef.current.scrollWidth !== 0) {

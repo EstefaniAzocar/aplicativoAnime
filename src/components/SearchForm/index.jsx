@@ -40,7 +40,7 @@ function SearchForm({ search, setSearch, getData }) {
         <button className="search_btn" onClick={handleSearch}>Buscar</button>
       </SearchContainer>
       
-      <p id="errorMessage" style={{ color: 'red', marginLeft: '10px' }}></p> 
+      <p id="errorMessage" style={{ color: '#ffffff', marginLeft: '10px' }}></p> 
     </div>
   );
 }

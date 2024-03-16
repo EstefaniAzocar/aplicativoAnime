@@ -11,7 +11,7 @@ export const HomeContainer = styled.div`
 `
 
 export const SearchContainer = styled.div`
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
