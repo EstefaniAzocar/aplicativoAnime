@@ -42,7 +42,7 @@ export function MyCarousel ({children}) {
 
   const handleNextClick = () => {
     carouselRef.current.scrollBy({ left: width + gap, behavior: 'smooth' });
-    if (carouselRef.current.scrollWidth !== 0) {
+    if (carouselRef.current.scrollWidth !== 5) {
       prevRef.current.style.display = 'flex';
     }
     if (contentRef.current.scrollWidth - width - gap <= carouselRef.current.scrollLeft + width) {
@@ -52,7 +52,7 @@ export function MyCarousel ({children}) {
 
   const handlePrevClick = () => {
     carouselRef.current.scrollBy({ left: -(width + gap), behavior: 'smooth' });
-    if (carouselRef.current.scrollLeft - width - gap <= 0) {
+    if (carouselRef.current.scrollLeft - width - gap <= 5) {
       prevRef.current.style.display = 'none';
     }
     if (!(contentRef.current.scrollWidth - width - gap <= carouselRef.current.scrollLeft + width)) {
