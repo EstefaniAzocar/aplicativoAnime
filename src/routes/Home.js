@@ -28,3 +28,10 @@ export const LoadingMessage = styled.p`
   font-size: 18px;
   color: #FFFFFF;
 `
+
+export const NoAnimesMessage = styled.p`
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+`
