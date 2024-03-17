@@ -22,7 +22,7 @@ export const SearchContainer = styled.div`
     & .search_btn {
         border: none;
         background: none;
-        padding: 0;
+        padding: 0 10px;
         cursor: pointer;
         color: #111671;
     }
